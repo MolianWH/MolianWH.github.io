@@ -578,7 +578,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2020-11-09
+                    2020-11-30
                 </div>
                 
 
@@ -597,7 +597,7 @@
         <hr class="clearfix">
         <div class="card-content article-card-content">
             <div id="articleContent">
-                <h1 id="1-问题定义"><a href="#1-问题定义" class="headerlink" title="1. 问题定义"></a>1. 问题定义</h1><p><strong>目标：</strong> 预测图像中各个物体是否出现及其位置。目标检测涉及图像中物体的<strong>定位</strong>和<strong>分类</strong>。<br><img src="https://img-blog.csdnimg.cn/202007151105556.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODM2OTQ5Mg==,size_16,color_FFFFFF,t_70" alt="Stanford’s CS231n Course slides(lecture 8)"><br>例如我们要区分出红细胞(RBC)、白细胞(WBC)和血小板(platelets)。除了需要用框(bounding box)框出物体，还需要对他们分类，标在框上。每个类别后跟着一个数字即判定为该类别的置信度。</p>
+                <h1 id="1-问题定义"><a href="#1-问题定义" class="headerlink" title="1. 问题定义"></a>1. 问题定义</h1><p><strong>目标：</strong> 预测图像中各个物体是否出现及其位置。目标检测涉及图像中物体的<strong>定位</strong>和<strong>分类</strong>。<br><img src="https://img-blog.csdnimg.cn/202007151105556.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODM2OTQ5Mg==,size_16,color_FFFFFF,t_70" alt="目标检测任务"><br>例如我们要区分出红细胞(RBC)、白细胞(WBC)和血小板(platelets)。除了需要用框(bounding box)框出物体，还需要对他们分类，标在框上。每个类别后跟着一个数字即判定为该类别的置信度。</p>
 <p><strong>那么如何判断那个模型好（准确）呢？</strong><br>比如上图中绿色的框标出大部分的白细胞 ，但是有些边缘的没有标出，但是我们不能通过图片，凭直觉判断模型的好坏。我们需要一个量化指标。即直接量化每个模型在测试集中的图像、类和不同置信阈值下的表现。这个工具就是mAP。<br>为了学习mAP，需要先了解几个概念。</p>
 <h1 id="2-几个概念"><a href="#2-几个概念" class="headerlink" title="2. 几个概念"></a>2. 几个概念</h1><ul>
 <li>mAP: （Mean Average Precision）平均AP</li>
@@ -617,8 +617,8 @@
 </blockquote>
 <p>例如上面的例子。假设一张图里有10个红细胞，模型检测到一个红细胞，并且标注位置和类别都正确，那么模型就是有<strong>高精度</strong>（1个红细胞的框是准确的），<strong>低召回率</strong>（10个只检测到1个）</p>
 <p>通过调整<strong>阈值</strong>可以控制召回率。具体做法要看模型需要的环境。比如当避免假真例比避免假负例更重要时（可以不都检测到，但检测到的一定要正确），可以设置高阈值。</p>
-<p>建立Precision和Recall之前的函数关系并绘制在图上，这个曲线就是<strong>P-R曲线</strong>。该曲线<strong>向下倾斜的（递减）</strong>，因为当置信度降低时，会做出更多的预测(提升召回)，而做出的预测则不那么精确(影响精度)。打个比方，当要求“说出每一种鲨鱼的名称”，你会从熟悉且肯定的说起（高精度），但是很难保证说出来的都正确（接近于高召回率，低精度）。如果PR曲线不是向下倾斜的，说明模型有问题，需要回去检测。<br><img src="https://img-blog.csdnimg.cn/20200715152547411.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODM2OTQ5Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
-<p><strong>那么如何通过P-R曲线找到最好的阈值呢？</strong><br>有三种思路。<br>（1）斜率接近-1<br>（2）计算P-R曲线下的面积（AUC，Area Under the Curve）<br>（3）计算平均精度（AP，Average Precision）<br>通常我们采用AP的方法。下面将开始介绍AP的计算。<br><img src="https://img-blog.csdnimg.cn/20200715153333755.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODM2OTQ5Mg==,size_16,color_FFFFFF,t_70" alt="在这里插入图片描述"></p>
+<p>建立Precision和Recall之间的函数关系并绘制在图上，这个曲线就是<strong>P-R曲线</strong>。该曲线<strong>向下倾斜的（递减）</strong>，因为当置信度降低时，会做出更多的预测(提升召回)，而做出的预测则不那么精确(影响精度)。打个比方，当要求“说出每一种鲨鱼的名称”，你会从熟悉且肯定的说起（高精度），但是很难保证说出来的都正确（接近于高召回率，低精度）。如果PR曲线不是向下倾斜的，说明模型有问题，需要回去检测。<br><img src="https://img-blog.csdnimg.cn/20200715152547411.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODM2OTQ5Mg==,size_16,color_FFFFFF,t_70" alt="Precision和Recall"></p>
+<p><strong>那么如何通过P-R曲线找到最好的阈值呢？</strong><br>有三种思路。<br>（1）斜率接近-1<br>（2）计算P-R曲线下的面积（AUC，Area Under the Curve）<br>（3）计算平均精度（AP，Average Precision）<br>通常我们采用AP的方法。下面将开始介绍AP的计算。<br><img src="https://img-blog.csdnimg.cn/20200715153333755.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODM2OTQ5Mg==,size_16,color_FFFFFF,t_70" alt="P-R曲线理解"></p>
 <h1 id="4-AP"><a href="#4-AP" class="headerlink" title="4. AP"></a>4. AP</h1><p>VOC2010前：Recall &gt;= 0, 0.1, 0.2, …, 1共11个recall下precision的平均值。熟悉微积分的可以看出，下面公式的含义就是$p(r)$即precision-recall曲线下的面积。<br>$$ AP = \frac {1}{11}\sum_{r\in{\lbrace 0,0.1,…,1\rbrace}}p_{interp}(r)$$<br>VOC2010后：所有数据点，而不是仅使用11个recall值来计算AP。<br>$$ p_{interp}(r)=\max_{\hat{r}:\hat{r}\geq{r}}p(\hat{r})$$<br>为保证p-r曲线单调递减，对于某个recall值r，precision值取所有recall&gt;=r中的最大值。</p>
 <h1 id="5-mAP"><a href="#5-mAP" class="headerlink" title="5. mAP"></a>5. mAP</h1><p>AP是针对一个类别的计算。所有类别的AP平均值即mAP。<br>建议在分析模型结果时查看各个类的AP值。这些值也许暗示你需要添加更多的训练样本。<br>例如下面的分析结果：</p>
 <pre class=" language-cpp"><code class="language-cpp"><span class="token comment" spellcheck="true">// EfficientDet模型</span>

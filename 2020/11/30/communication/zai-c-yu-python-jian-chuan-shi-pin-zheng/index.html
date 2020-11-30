@@ -641,7 +641,7 @@
 <span class="token macro property">#<span class="token directive keyword">define</span> FRAME_SIZE           FRAME_W_H*sizeof(unsigned char)*3+sizeof(ImgInf)</span>
 
 <span class="token macro property">#<span class="token directive keyword">define</span> MEMORY_SIZE          FRAME_NUMBER*FRAME_SIZE</span></code></pre>
-<p><img src="https://img-blog.csdnimg.cn/20201130102605383.PNG#pic_center" alt="在这里插入图片描述"></p>
+<p><img src="https://img-blog.csdnimg.cn/20201130102605383.PNG#pic_center" alt="图像数据空间分配"></p>
 <p>定义共享内存类SHAREDMEMORY</p>
 <pre class=" language-cpp"><code class="language-cpp"><span class="token keyword">class</span> <span class="token class-name">SHAREDMEMORY</span>
 <span class="token punctuation">{</span>
@@ -987,7 +987,7 @@ Output    :获取的字符串
     <span class="token keyword">return</span> <span class="token number">0</span><span class="token punctuation">;</span>
 <span class="token punctuation">}</span></code></pre>
 <p>同时开启两个工程，则可以接收视频了。</p>
-<h3 id="2-1-4-C-之间共享内存通信视频测试结果"><a href="#2-1-4-C-之间共享内存通信视频测试结果" class="headerlink" title="2.1.4 C++之间共享内存通信视频测试结果"></a>2.1.4 C++之间共享内存通信视频测试结果</h3><p>这里看到，写共享内存速度为15fps，读共享内存速度为65fps（超实时），写速度主要的影响因素与opecv有关。如果优化，还需改视频编解码部分。<br><img src="https://img-blog.csdnimg.cn/20201130204440444.png#pic_center" alt="在这里插入图片描述"></p>
+<h3 id="2-1-4-C-之间共享内存通信视频测试结果"><a href="#2-1-4-C-之间共享内存通信视频测试结果" class="headerlink" title="2.1.4 C++之间共享内存通信视频测试结果"></a>2.1.4 C++之间共享内存通信视频测试结果</h3><p>这里看到，写共享内存速度为15fps，读共享内存速度为65fps（超实时），写速度主要的影响因素与opecv有关。如果优化，还需改视频编解码部分。<br><img src="https://img-blog.csdnimg.cn/20201130204440444.png#pic_center" alt="C++和python共享内存传视频测试结果"></p>
 <h2 id="2-2-C-和python间视频通信"><a href="#2-2-C-和python间视频通信" class="headerlink" title="2.2 C++和python间视频通信"></a>2.2 C++和python间视频通信</h2><p>这里以C++作为发送端，python作为接受端。逆向过程还有待测试。网上有教程提到python不能创建共享内存作为发送端，这种说法是错的。本人已测试过，只是发送数据都是字符串型，对于图像数据还有待研究。</p>
 <h3 id="2-2-1-接口函数"><a href="#2-2-1-接口函数" class="headerlink" title="2.2.1 接口函数"></a>2.2.1 接口函数</h3><p>这里主要用到的是<strong>mmap</strong>和<strong>numpy的frombuffer</strong>.</p>
 <p>关于mmap，请参考<a target="_blank" rel="noopener" href="http://doc.codingdict.com/python_352/library/mmap.html">官网</a>的接口说明。十分详细，不再赘述。</p>
