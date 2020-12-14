@@ -6,7 +6,7 @@
   <link href="https://molianwh.github.io/atom.xml" rel="self"/>
   
   <link href="https://molianwh.github.io/"/>
-  <updated>2020-11-30T13:55:43.644Z</updated>
+  <updated>2020-12-14T12:37:40.807Z</updated>
   <id>https://molianwh.github.io/</id>
   
   <author>
@@ -15,6 +15,31 @@
   </author>
   
   <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Winsock创建socket server和client</title>
+    <link href="https://molianwh.github.io/2020/12/14/communication/winsock-chuang-jian-socket-server-he-client/"/>
+    <id>https://molianwh.github.io/2020/12/14/communication/winsock-chuang-jian-socket-server-he-client/</id>
+    <published>2020-12-14T12:37:14.000Z</published>
+    <updated>2020-12-14T12:37:40.807Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文详细介绍在Windows 10下利用Winsock创建socket server和client应用步骤和源码。项目源码可以到我的&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Communication" scheme="https://molianwh.github.io/categories/Communication/"/>
+    
+    
+    <category term="socket" scheme="https://molianwh.github.io/tags/socket/"/>
+    
+  </entry>
   
   <entry>
     <title>在C++与python间传视频帧</title>
@@ -48,7 +73,7 @@
     <link href="https://molianwh.github.io/2020/07/15/cv/mu-biao-jian-ce-zhong-de-ping-jie-han-shu/"/>
     <id>https://molianwh.github.io/2020/07/15/cv/mu-biao-jian-ce-zhong-de-ping-jie-han-shu/</id>
     <published>2020-07-15T07:56:33.000Z</published>
-    <updated>2020-11-30T13:57:37.243Z</updated>
+    <updated>2020-12-14T12:32:55.118Z</updated>
     
     
       
@@ -75,7 +100,7 @@
     <link href="https://molianwh.github.io/2020/05/15/deepstream/deepstream5.0-jie-he-opencv4-shi-xian-shi-pin-de-fen-xi-he-jie-tu/"/>
     <id>https://molianwh.github.io/2020/05/15/deepstream/deepstream5.0-jie-he-opencv4-shi-xian-shi-pin-de-fen-xi-he-jie-tu/</id>
     <published>2020-05-15T08:58:14.000Z</published>
-    <updated>2020-11-09T13:19:16.599Z</updated>
+    <updated>2020-12-14T12:33:04.604Z</updated>
     
     
       
