@@ -62,9 +62,9 @@
     <category term="Communication" scheme="https://molianwh.github.io/categories/Communication/"/>
     
     
-    <category term="共享内存" scheme="https://molianwh.github.io/tags/%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98/"/>
-    
     <category term="socket" scheme="https://molianwh.github.io/tags/socket/"/>
+    
+    <category term="共享内存" scheme="https://molianwh.github.io/tags/%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98/"/>
     
   </entry>
   
