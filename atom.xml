@@ -1,0 +1,204 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom">
+  <title>马捷径</title>
+  
+  <subtitle>马捷径</subtitle>
+  <link href="https://molianwh.github.io/atom.xml" rel="self"/>
+  
+  <link href="https://molianwh.github.io/"/>
+  <updated>2021-12-21T02:30:13.634Z</updated>
+  <id>https://molianwh.github.io/</id>
+  
+  <author>
+    <name>Jiejing.Ma</name>
+    
+  </author>
+  
+  <generator uri="https://hexo.io/">Hexo</generator>
+  
+  <entry>
+    <title>Hello World</title>
+    <link href="https://molianwh.github.io/2022/01/11/hello-world/"/>
+    <id>https://molianwh.github.io/2022/01/11/hello-world/</id>
+    <published>2022-01-11T10:10:22.621Z</published>
+    <updated>2021-12-21T02:30:13.634Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
+        
+      
+    
+    
+    
+    
+  </entry>
+  
+  <entry>
+    <title>堆</title>
+    <link href="https://molianwh.github.io/2021/12/23/algorithm/dui/"/>
+    <id>https://molianwh.github.io/2021/12/23/algorithm/dui/</id>
+    <published>2021-12-23T03:32:00.000Z</published>
+    <updated>2021-12-23T04:28:35.152Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;hr&gt;
+&lt;h2 id=&quot;堆的定义&quot;&gt;&lt;a href=&quot;#堆的定义&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Algorithm" scheme="https://molianwh.github.io/categories/Algorithm/"/>
+    
+    
+    <category term="算法" scheme="https://molianwh.github.io/tags/%E7%AE%97%E6%B3%95/"/>
+    
+    <category term="堆" scheme="https://molianwh.github.io/tags/%E5%A0%86/"/>
+    
+    <category term="数据结构" scheme="https://molianwh.github.io/tags/%E6%95%B0%E6%8D%AE%E7%BB%93%E6%9E%84/"/>
+    
+    <category term="优先队列" scheme="https://molianwh.github.io/tags/%E4%BC%98%E5%85%88%E9%98%9F%E5%88%97/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>动态规划</title>
+    <link href="https://molianwh.github.io/2021/12/22/algorithm/dong-tai-gui-hua/"/>
+    <id>https://molianwh.github.io/2021/12/22/algorithm/dong-tai-gui-hua/</id>
+    <published>2021-12-22T03:32:00.000Z</published>
+    <updated>2021-12-22T03:44:10.482Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;hr&gt;
+</summary>
+        
+      
+    
+    
+    
+    <category term="Algorithm" scheme="https://molianwh.github.io/categories/Algorithm/"/>
+    
+    
+    <category term="动态规划" scheme="https://molianwh.github.io/tags/%E5%8A%A8%E6%80%81%E8%A7%84%E5%88%92/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>Winsock创建socket server和client</title>
+    <link href="https://molianwh.github.io/2020/12/14/communication/winsock-chuang-jian-socket-server-he-client/"/>
+    <id>https://molianwh.github.io/2020/12/14/communication/winsock-chuang-jian-socket-server-he-client/</id>
+    <published>2020-12-14T12:37:14.000Z</published>
+    <updated>2020-12-14T12:37:40.807Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;p&gt;本文详细介绍在Windows 10下利用Winsock创建socket server和client应用步骤和源码。项目源码可以到我的&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="Communication" scheme="https://molianwh.github.io/categories/Communication/"/>
+    
+    
+    <category term="socket" scheme="https://molianwh.github.io/tags/socket/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>在C++与python间传视频帧</title>
+    <link href="https://molianwh.github.io/2020/11/30/communication/zai-c-yu-python-jian-chuan-shi-pin-zheng/"/>
+    <id>https://molianwh.github.io/2020/11/30/communication/zai-c-yu-python-jian-chuan-shi-pin-zheng/</id>
+    <published>2020-11-30T13:37:33.000Z</published>
+    <updated>2020-11-30T13:55:43.644Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;引言&quot;&gt;&lt;a href=&quot;#引言&quot; class=&quot;headerlink&quot;</summary>
+        
+      
+    
+    
+    
+    <category term="Communication" scheme="https://molianwh.github.io/categories/Communication/"/>
+    
+    
+    <category term="socket" scheme="https://molianwh.github.io/tags/socket/"/>
+    
+    <category term="共享内存" scheme="https://molianwh.github.io/tags/%E5%85%B1%E4%BA%AB%E5%86%85%E5%AD%98/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>目标检测中的评价指标</title>
+    <link href="https://molianwh.github.io/2020/07/15/cv/mu-biao-jian-ce-zhong-de-ping-jie-han-shu/"/>
+    <id>https://molianwh.github.io/2020/07/15/cv/mu-biao-jian-ce-zhong-de-ping-jie-han-shu/</id>
+    <published>2020-07-15T07:56:33.000Z</published>
+    <updated>2021-12-22T10:49:13.839Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;1-问题定义&quot;&gt;&lt;a href=&quot;#1-问题定义&quot; class=&quot;headerlink&quot; title=&quot;1. 问题定义&quot;&gt;&lt;/a&gt;1. 问题定义&lt;/h1&gt;&lt;p&gt;&lt;strong&gt;目标：&lt;/strong&gt;</summary>
+        
+      
+    
+    
+    
+    <category term="CV" scheme="https://molianwh.github.io/categories/CV/"/>
+    
+    
+    <category term="CV" scheme="https://molianwh.github.io/tags/CV/"/>
+    
+    <category term="目标检测" scheme="https://molianwh.github.io/tags/%E7%9B%AE%E6%A0%87%E6%A3%80%E6%B5%8B/"/>
+    
+  </entry>
+  
+  <entry>
+    <title>DeepStream5.0结合OpenCV4实现视频的分析和截图</title>
+    <link href="https://molianwh.github.io/2020/05/15/deepstream/deepstream5.0-jie-he-opencv4-shi-xian-shi-pin-de-fen-xi-he-jie-tu/"/>
+    <id>https://molianwh.github.io/2020/05/15/deepstream/deepstream5.0-jie-he-opencv4-shi-xian-shi-pin-de-fen-xi-he-jie-tu/</id>
+    <published>2020-05-15T08:58:14.000Z</published>
+    <updated>2020-12-14T12:33:04.604Z</updated>
+    
+    
+      
+      
+        
+        
+    <summary type="html">&lt;h1 id=&quot;0-前言&quot;&gt;&lt;a href=&quot;#0-前言&quot; class=&quot;headerlink&quot; title=&quot;0. 前言&quot;&gt;&lt;/a&gt;0. 前言&lt;/h1&gt;&lt;p&gt;上次测试opencv结合deepstream4进行截图时，出现了一个&lt;a</summary>
+        
+      
+    
+    
+    
+    <category term="视频分析" scheme="https://molianwh.github.io/categories/%E8%A7%86%E9%A2%91%E5%88%86%E6%9E%90/"/>
+    
+    
+    <category term="视频分析" scheme="https://molianwh.github.io/tags/%E8%A7%86%E9%A2%91%E5%88%86%E6%9E%90/"/>
+    
+    <category term="DeepStream" scheme="https://molianwh.github.io/tags/DeepStream/"/>
+    
+  </entry>
+  
+</feed>
