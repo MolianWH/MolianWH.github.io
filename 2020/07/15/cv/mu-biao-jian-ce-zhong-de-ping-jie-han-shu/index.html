@@ -607,7 +607,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2021-12-22
+                    2022-04-11
                 </div>
                 
 
@@ -629,6 +629,7 @@
                 <h1 id="1-问题定义"><a href="#1-问题定义" class="headerlink" title="1. 问题定义"></a>1. 问题定义</h1><p><strong>目标：</strong> 预测图像中各个物体是否出现及其位置。目标检测涉及图像中物体的<strong>定位</strong>和<strong>分类</strong>。</p>
 <p><img src="https://img-blog.csdnimg.cn/202007151105556.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODM2OTQ5Mg==,size_16,color_FFFFFF,t_70" alt="目标检测任务"></p>
 <p>例如我们要区分出红细胞(RBC)、白细胞(WBC)和血小板(platelets)。除了需要用框(bounding box)框出物体，还需要对他们分类，标在框上。每个类别后跟着一个数字即判定为该类别的置信度。</p>
+<p><a target="_blank" rel="noopener" href="https://imgtu.com/i/LE1iGV"><img src="https://s1.ax1x.com/2022/04/11/LE1iGV.gif" alt="细胞分类" border="0"></a></p>
 <p><strong>那么如何判断那个模型好（准确）呢？</strong><br>比如上图中绿色的框标出大部分的白细胞 ，但是有些边缘的没有标出，但是我们不能通过图片，凭直觉判断模型的好坏。我们需要一个量化指标。即直接量化每个模型在测试集中的图像、类和不同置信阈值下的表现。这个工具就是mAP。<br>为了学习mAP，需要先了解几个概念。</p>
 <h1 id="2-几个概念"><a href="#2-几个概念" class="headerlink" title="2. 几个概念"></a>2. 几个概念</h1><ul>
 <li>mAP: （Mean Average Precision）平均AP</li>
