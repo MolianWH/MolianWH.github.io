@@ -29,7 +29,7 @@
 
     <script src="/libs/jquery/jquery.min.js"></script>
 
-<meta name="generator" content="Hexo 5.2.0">
+<meta name="generator" content="Hexo 5.4.2">
 <style>.github-emoji { position: relative; display: inline-block; width: 1.2em; min-height: 1.2em; overflow: hidden; vertical-align: top; color: transparent; }  .github-emoji > span { position: relative; z-index: 10; }  .github-emoji img, .github-emoji .fancybox { margin: 0 !important; padding: 0 !important; border: none !important; outline: none !important; text-decoration: none !important; user-select: none !important; cursor: auto !important; }  .github-emoji img { height: 1.2em !important; width: 1.2em !important; position: absolute !important; left: 50% !important; top: 50% !important; transform: translate(-50%, -50%) !important; user-select: none !important; cursor: auto !important; } .github-emoji-fallback { color: inherit; } .github-emoji-fallback img { opacity: 0 !important; }</style>
 <link rel="alternate" href="/atom.xml" title="马捷径" type="application/atom+xml">
 <link rel="stylesheet" href="/css/prism-tomorrow.css" type="text/css"></head>
@@ -607,7 +607,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-04-11
+                    2022-08-11
                 </div>
                 
 
@@ -647,6 +647,11 @@
 <blockquote>
 <p>Precision : “when your model guesses how often does it guess correctly?” （模型多少次预测正确？）<br>Recall ：“has your model guessed every time that it should have guessed?” （模型应该检测到的某一物体时候是否检测到了物体？）</p>
 </blockquote>
+<p>定义是：</p>
+<ul>
+<li>精度： 分类正确的正样本数占<strong>分类器判定为正样本</strong>的比例</li>
+<li>召回率：分类正确的正样本数占<strong>真正正样本数</strong>的比例</li>
+</ul>
 <p>例如上面的例子。假设一张图里有10个红细胞，模型检测到一个红细胞，并且标注位置和类别都正确，那么模型就是有<strong>高精度</strong>（1个红细胞的框是准确的），<strong>低召回率</strong>（10个只检测到1个）</p>
 <p>通过调整<strong>阈值</strong>可以控制召回率。具体做法要看模型需要的环境。比如当避免假真例比避免假负例更重要时（可以不都检测到，但检测到的一定要正确），可以设置高阈值。</p>
 <p>建立Precision和Recall之间的函数关系并绘制在图上，这个曲线就是<strong>P-R曲线</strong>。该曲线<strong>向下倾斜的（递减）</strong>，因为当置信度降低时，会做出更多的预测(提升召回)，而做出的预测则不那么精确(影响精度)。打个比方，当要求“说出每一种鲨鱼的名称”，你会从熟悉且肯定的说起（高精度），但是很难保证说出来的都正确（接近于高召回率，低精度）。如果PR曲线不是向下倾斜的，说明模型有问题，需要回去检测。<br><img src="https://img-blog.csdnimg.cn/20200715152547411.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl8zODM2OTQ5Mg==,size_16,color_FFFFFF,t_70" alt="Precision和Recall"></p>
