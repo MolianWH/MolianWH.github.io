@@ -29,33 +29,6 @@
     
     
     <entry>
-      <title>特征工程</title>
-      <link href="2022/08/08/ai/te-zheng-gong-cheng/"/>
-      <url>2022/08/08/ai/te-zheng-gong-cheng/</url>
-      
-        <content type="html"><![CDATA[<h1 id="前言"><a href="#前言" class="headerlink" title="前言"></a>前言</h1><p>特征工程，顾名思义，是对原始数据进行一系列工程处理，将其提炼为特征，作为输入供算法和模型使用。从本质上来讲，特征工程是一个表示和展现数据的过程。在实际工作中，特征工程旨在去除原始数据中的杂质和冗余，设计更高效的特征以刻画求解的问题与预测模型之间的关系。</p><p>数据可以分为两类：</p><p>（1）结构化数据。包含了数值型和类别型两种数据。一行数据代表一个样本。</p><p>（2）非结构化数据。如图片、视频、音频、文本，每个数据的大小也不同。</p><hr><h1 id="特征归一化"><a href="#特征归一化" class="headerlink" title="特征归一化"></a>特征归一化</h1><h1 id="类别型特征"><a href="#类别型特征" class="headerlink" title="类别型特征"></a>类别型特征</h1><h1 id="组合特征"><a href="#组合特征" class="headerlink" title="组合特征"></a>组合特征</h1><h1 id="文本"><a href="#文本" class="headerlink" title="文本"></a>文本</h1><h1 id="Word2Vec"><a href="#Word2Vec" class="headerlink" title="Word2Vec"></a>Word2Vec</h1><h1 id="图像数据"><a href="#图像数据" class="headerlink" title="图像数据"></a>图像数据</h1>]]></content>
-      
-      
-      <categories>
-          
-          <category> Algorithm </category>
-          
-          <category> AI </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 特征工程 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
       <title>FLAME论文解读</title>
       <link href="2022/06/26/cv/flame-lun-wen-jie-du/"/>
       <url>2022/06/26/cv/flame-lun-wen-jie-du/</url>
@@ -77,19 +50,6 @@
             <tag> CG </tag>
             
         </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title></title>
-      <link href="2022/01/12/communication/hu-chi-suo/"/>
-      <url>2022/01/12/communication/hu-chi-suo/</url>
-      
-        <content type="html"><![CDATA[<p>信号量</p><pre class=" language-cpp"><code class="language-cpp"><span class="token macro property">#<span class="token directive keyword">include</span> <span class="token string">&lt;semaphore.h></span></span><span class="token keyword">class</span> <span class="token class-name">Foo</span> <span class="token punctuation">{</span><span class="token keyword">protected</span><span class="token operator">:</span>    sem_t firstJobDone<span class="token punctuation">;</span>    sem_t secondJobDone<span class="token punctuation">;</span><span class="token keyword">public</span><span class="token operator">:</span>    <span class="token function">Foo</span><span class="token punctuation">(</span><span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token function">sem_init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>firstJobDone<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">sem_init</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>secondJobDone<span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">,</span> <span class="token number">0</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">void</span> <span class="token function">first</span><span class="token punctuation">(</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span> printFirst<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token comment" spellcheck="true">// printFirst() outputs "first".</span>        <span class="token function">printFirst</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">sem_post</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>firstJobDone<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">void</span> <span class="token function">second</span><span class="token punctuation">(</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span> printSecond<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token function">sem_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>firstJobDone<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// printSecond() outputs "second".</span>        <span class="token function">printSecond</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token function">sem_post</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>secondJobDone<span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span>    <span class="token keyword">void</span> <span class="token function">third</span><span class="token punctuation">(</span>function<span class="token operator">&lt;</span><span class="token keyword">void</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token operator">></span> printThird<span class="token punctuation">)</span> <span class="token punctuation">{</span>        <span class="token function">sem_wait</span><span class="token punctuation">(</span><span class="token operator">&amp;</span>secondJobDone<span class="token punctuation">)</span><span class="token punctuation">;</span>        <span class="token comment" spellcheck="true">// printThird() outputs "third".</span>        <span class="token function">printThird</span><span class="token punctuation">(</span><span class="token punctuation">)</span><span class="token punctuation">;</span>    <span class="token punctuation">}</span><span class="token punctuation">}</span><span class="token punctuation">;</span></code></pre>]]></content>
-      
-      
       
     </entry>
     
@@ -119,31 +79,6 @@
             <tag> 数据结构 </tag>
             
             <tag> 优先队列 </tag>
-            
-        </tags>
-      
-    </entry>
-    
-    
-    
-    <entry>
-      <title>动态规划</title>
-      <link href="2021/12/22/algorithm/dong-tai-gui-hua/"/>
-      <url>2021/12/22/algorithm/dong-tai-gui-hua/</url>
-      
-        <content type="html"><![CDATA[<hr>]]></content>
-      
-      
-      <categories>
-          
-          <category> Algorithm </category>
-          
-      </categories>
-      
-      
-        <tags>
-            
-            <tag> 动态规划 </tag>
             
         </tags>
       
