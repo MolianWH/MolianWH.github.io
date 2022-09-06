@@ -4,7 +4,7 @@
 
 <head>
     <meta charset="utf-8">
-    <meta name="keywords" content="CNN">
+    <meta name="keywords" content="卷积核,感受野,特征图,分组卷积,转置卷积,空洞卷积,可形变卷积,批归一化,瓶颈结构,沙漏结构">
     <meta name="description" content="JUST FOR FUN">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no">
@@ -603,7 +603,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-09-02
+                    2022-09-06
                 </div>
                 
 
@@ -713,6 +713,60 @@
 <center>左侧普通卷积，右侧可形变卷积</center>
 
 <hr>
+<h2 id="三、卷积神经网络基础模块"><a href="#三、卷积神经网络基础模块" class="headerlink" title="三、卷积神经网络基础模块"></a>三、卷积神经网络基础模块</h2><h3 id="1-批归一化"><a href="#1-批归一化" class="headerlink" title="1. 批归一化"></a><strong>1. 批归一化</strong></h3><p>批归一化的作用：</p>
+<p>确保网络各层即使参数发生变化，输入输出的分布保持稳定，避免内部协变量偏移。采用批归一化处理，训练更稳定，对初始值不再敏感，可以使用较大的学习率快速达到收敛。</p>
+<p>在实践过程中，业界倾向于将批归一化置于<strong>激活函数后</strong>。</p>
+<h3 id="2-卷积层"><a href="#2-卷积层" class="headerlink" title="2. 卷积层"></a><strong>2. 卷积层</strong></h3><p>可以将卷积层理解为为多层感知机提取非线性特征。</p>
+<p>由于卷积核是局部连接，提取的局部特征，对位置不敏感，因此解决不同位置有哪些元素这样的高层语义信息比较好。但是无法提取不同位置元素之间的联系。</p>
+<h3 id="3-全连接层"><a href="#3-全连接层" class="headerlink" title="3. 全连接层"></a><strong>3. 全连接层</strong></h3><p>与卷积层不同，全连接层的每个输出与所有输入都有连接，所以对位置敏感。可以提取不同位置间的联系。比如眼睛和嘴的位置正确才能构成人脸。</p>
+<p>在分类问题中，全连接层一般放在卷积层后，即卷积神经网络的最后几层通常是全连接层。有时也用全局平均池化替代，优点是参数少。</p>
+<h3 id="4-瓶颈结构"><a href="#4-瓶颈结构" class="headerlink" title="4. 瓶颈结构"></a><strong>4. 瓶颈结构</strong></h3><center><img src="https://s1.ax1x.com/2022/09/06/vH9WJP.png" ,="" width="480"></center>
+<center>左侧普通卷积层，右侧瓶颈结构</center>
+
+
+<p>由一个$1\times1$的卷积压缩大卷积层输入特征图通道数，处理结束后再用一个$1\times1$恢复通道。</p>
+<p>瓶颈结构可以大大减少参数量，降低计算量。同时增加了网络层数，增大感受野，提升特征提取能力。</p>
+<p>瓶颈结构可以用于所有的卷积神经网络中。如目标检测、分割、生成式对抗网络。</p>
+<h3 id="5-沙漏结构"><a href="#5-沙漏结构" class="headerlink" title="5. 沙漏结构"></a><strong>5. 沙漏结构</strong></h3><center><img src="https://s1.ax1x.com/2022/09/06/vHCxht.jpg" ,="" width="480"></center>
+<center>沙漏结构</center>
+
+<center><img src="https://s1.ax1x.com/2022/09/06/vHP9c8.png" ,="" width="480"></center>
+<center>姿态估计中沙漏结构的堆叠</center>
+
+
+<p>沙漏结构类似于瓶颈结构，比瓶颈结构尺寸更大，涉及层数更多。包括两个分支：</p>
+<ul>
+<li>编码器：（自底向上），利用卷积、池化等操作压缩特征。</li>
+<li>解码器：（自顶向下），利用反卷积、插值上采样，扩大尺寸（通道可能减少）。</li>
+</ul>
+<p>沙漏结构具有以下作用：</p>
+<ul>
+<li>多尺度特征融合</li>
+<li>提升感受野，增强对小尺寸但又依赖上下文的物体感知能力，如人体关节点。</li>
+</ul>
+<h2 id="四、常见的卷积神经网络"><a href="#四、常见的卷积神经网络" class="headerlink" title="四、常见的卷积神经网络"></a>四、常见的卷积神经网络</h2><p>这里不详细介绍每种网络。</p>
+<ul>
+<li><p>AlexNet</p>
+<ul>
+<li>简单的堆叠卷积层、池化层</li>
+</ul>
+</li>
+<li><p>VGGNet</p>
+<ul>
+<li>使用更小的卷积核，3×3或5×5</li>
+</ul>
+</li>
+<li><p>Inception</p>
+<ul>
+<li>使用瓶颈结构</li>
+</ul>
+</li>
+<li><p>ResNet</p>
+<ul>
+<li>使用跳层连接shortcut</li>
+</ul>
+</li>
+</ul>
 
             </div>
             <hr/>
@@ -1053,9 +1107,9 @@
                 <a href="/2022/08/08/ai/te-zheng-gong-cheng/">
                     <div class="card-image">
                         
-                        <img src="https://imgtu.com/i/TlFIX9" class="responsive-img" alt="动态规划">
+                        <img src="https://imgtu.com/i/TlFIX9" class="responsive-img" alt="特征工程">
                         
-                        <span class="card-title">动态规划</span>
+                        <span class="card-title">特征工程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1072,8 +1126,12 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Algorithm-AI/" class="post-category">
-                                    Algorithm, AI
+                            <a href="/categories/Algorithm/" class="post-category">
+                                    Algorithm
+                                </a>
+                            
+                            <a href="/categories/Algorithm/AI/" class="post-category">
+                                    AI
                                 </a>
                             
                             

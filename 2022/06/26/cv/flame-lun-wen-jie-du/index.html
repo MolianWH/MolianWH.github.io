@@ -607,7 +607,7 @@
                 
                 <div class="post-date info-break-policy">
                     <i class="far fa-calendar-check fa-fw"></i>更新日期:&nbsp;&nbsp;
-                    2022-06-28
+                    2022-09-03
                 </div>
                 
 
@@ -628,7 +628,7 @@
             <div id="articleContent">
                 <p>论文：【2017马普所】Learning a model of facial shape and expression from 4D scans</p>
 <h1 id="1-简介"><a href="#1-简介" class="headerlink" title="1. 简介"></a>1. 简介</h1><p>FLAME是一个关于人脸的参数化模型。所谓参数化模型，通俗来说是指通过调整参数（如形状参数、姿态参数、表情参数等）可以控制生成的最终模型长什么样。类似的还有人体参数化模型SMPL，SMPL-X等。</p>
-<p>通过训练多个数据集不同人脸（早期人脸模型是通过扫描中性表情的年轻欧洲人建立的），将<strong>身份(indentity)**、</strong>姿态**(pose)和<strong>面部表情</strong>(facial expression)特征分离开来。FLAME包含了一个形状(shape)空间变量、连接头部的脖子、可旋转的眼球组成。可以通过学习表情混合形状(expression blendshapes)捕捉面部非刚性形变。</p>
+<p>通过训练多个数据集不同人脸（早期人脸模型是通过扫描中性表情的年轻欧洲人建立的），将<strong>身份</strong>(indentity)、<strong>姿态</strong>(pose)和<strong>面部表情</strong>(facial expression)特征分离开来。FLAME包含了一个形状(shape)空间变量、连接头部的脖子、可旋转的眼球组成。可以通过学习表情混合形状(expression blendshapes)捕捉面部非刚性形变。</p>
 <p>还有一种求解面部表情blenshapes的方法，是基于面部表情单元(<strong><a target="_blank" rel="noopener" href="https://imotions.com/blog/facial-action-coding-system/">FACS</a></strong>)实现的。FACS多个设置可能会产生相同的表情结果，这使得从数据中求解参数变得复杂。FLAME采用标准正交表达式，充分考虑了identity和pose。这对于稀疏数据和噪声的拟合效果更好。</p>
 <p><img src="https://s1.ax1x.com/2022/06/25/jkdtYj.png" alt="FACS"></p>
 <h1 id="2-训练数据集"><a href="#2-训练数据集" class="headerlink" title="2. 训练数据集"></a>2. 训练数据集</h1><ul>
@@ -996,9 +996,9 @@
                 <a href="/2022/08/08/ai/te-zheng-gong-cheng/">
                     <div class="card-image">
                         
-                        <img src="https://imgtu.com/i/TlFIX9" class="responsive-img" alt="动态规划">
+                        <img src="https://imgtu.com/i/TlFIX9" class="responsive-img" alt="特征工程">
                         
-                        <span class="card-title">动态规划</span>
+                        <span class="card-title">特征工程</span>
                     </div>
                 </a>
                 <div class="card-content article-content">
@@ -1015,8 +1015,12 @@
                             
                             <i class="fas fa-bookmark fa-fw icon-category"></i>
                             
-                            <a href="/categories/Algorithm-AI/" class="post-category">
-                                    Algorithm, AI
+                            <a href="/categories/Algorithm/" class="post-category">
+                                    Algorithm
+                                </a>
+                            
+                            <a href="/categories/Algorithm/AI/" class="post-category">
+                                    AI
                                 </a>
                             
                             

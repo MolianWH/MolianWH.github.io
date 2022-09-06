@@ -6,7 +6,7 @@
   <link href="https://molianwh.github.io/atom.xml" rel="self"/>
   
   <link href="https://molianwh.github.io/"/>
-  <updated>2022-09-02T10:18:14.226Z</updated>
+  <updated>2022-09-06T11:13:13.902Z</updated>
   <id>https://molianwh.github.io/</id>
   
   <author>
@@ -21,7 +21,7 @@
     <link href="https://molianwh.github.io/2022/08/31/cv/juan-ji-shen-jing-wang-luo/"/>
     <id>https://molianwh.github.io/2022/08/31/cv/juan-ji-shen-jing-wang-luo/</id>
     <published>2022-08-31T07:56:33.000Z</published>
-    <updated>2022-09-02T10:18:14.226Z</updated>
+    <updated>2022-09-06T11:13:13.902Z</updated>
     
     
       
@@ -42,11 +42,11 @@
   </entry>
   
   <entry>
-    <title>动态规划</title>
+    <title>特征工程</title>
     <link href="https://molianwh.github.io/2022/08/08/ai/te-zheng-gong-cheng/"/>
     <id>https://molianwh.github.io/2022/08/08/ai/te-zheng-gong-cheng/</id>
     <published>2022-08-08T06:45:00.000Z</published>
-    <updated>2022-08-08T07:11:36.706Z</updated>
+    <updated>2022-09-03T02:55:55.259Z</updated>
     
     
       
@@ -59,7 +59,9 @@
     
     
     
-    <category term="Algorithm, AI" scheme="https://molianwh.github.io/categories/Algorithm-AI/"/>
+    <category term="Algorithm" scheme="https://molianwh.github.io/categories/Algorithm/"/>
+    
+    <category term="AI" scheme="https://molianwh.github.io/categories/Algorithm/AI/"/>
     
     
     <category term="特征工程" scheme="https://molianwh.github.io/tags/%E7%89%B9%E5%BE%81%E5%B7%A5%E7%A8%8B/"/>
@@ -71,7 +73,7 @@
     <link href="https://molianwh.github.io/2022/06/26/cv/flame-lun-wen-jie-du/"/>
     <id>https://molianwh.github.io/2022/06/26/cv/flame-lun-wen-jie-du/</id>
     <published>2022-06-26T07:56:33.000Z</published>
-    <updated>2022-06-28T10:04:07.908Z</updated>
+    <updated>2022-09-03T02:56:53.246Z</updated>
     
     
       
@@ -108,27 +110,6 @@
         
     <summary type="html">&lt;p&gt;信号量&lt;/p&gt;
 &lt;pre class=&quot; language-cpp&quot;&gt;&lt;code class=&quot;language-cpp&quot;&gt;&lt;span class=&quot;token macro property&quot;&gt;#&lt;span class=&quot;token directive</summary>
-        
-      
-    
-    
-    
-    
-  </entry>
-  
-  <entry>
-    <title>Hello World</title>
-    <link href="https://molianwh.github.io/2022/01/11/hello-world/"/>
-    <id>https://molianwh.github.io/2022/01/11/hello-world/</id>
-    <published>2022-01-11T10:10:22.621Z</published>
-    <updated>2021-12-21T02:30:13.634Z</updated>
-    
-    
-      
-      
-        
-        
-    <summary type="html">&lt;p&gt;Welcome to &lt;a href=&quot;https://hexo.io/&quot;&gt;Hexo&lt;/a&gt;! This is your very first post. Check &lt;a href=&quot;https://hexo.io/docs/&quot;&gt;documentation&lt;/a&gt;</summary>
         
       
     
